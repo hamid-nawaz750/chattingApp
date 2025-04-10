@@ -1,0 +1,2 @@
+D:/flutter_practice/chatting_app/android/app/.cxx/Debug/u3f3h182/x86_64/CMakeFiles/edit_cache.dir
+D:/flutter_practice/chatting_app/android/app/.cxx/Debug/u3f3h182/x86_64/CMakeFiles/rebuild_cache.dir

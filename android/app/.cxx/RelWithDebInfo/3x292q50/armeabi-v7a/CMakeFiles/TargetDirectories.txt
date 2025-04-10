@@ -1,0 +1,2 @@
+D:/flutter_practice/chatting_app/android/app/.cxx/RelWithDebInfo/3x292q50/armeabi-v7a/CMakeFiles/edit_cache.dir
+D:/flutter_practice/chatting_app/android/app/.cxx/RelWithDebInfo/3x292q50/armeabi-v7a/CMakeFiles/rebuild_cache.dir
