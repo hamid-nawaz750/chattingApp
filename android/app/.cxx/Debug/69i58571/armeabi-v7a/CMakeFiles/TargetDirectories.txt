@@ -1,0 +1,2 @@
+D:/chatting app_update version/chatting_app/android/app/.cxx/Debug/69i58571/armeabi-v7a/CMakeFiles/edit_cache.dir
+D:/chatting app_update version/chatting_app/android/app/.cxx/Debug/69i58571/armeabi-v7a/CMakeFiles/rebuild_cache.dir

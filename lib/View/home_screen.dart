@@ -27,6 +27,33 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'List of Users',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 20,
+            color: Colors.white,
+          ),
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.deepPurple,
+        elevation: 4,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.more_vert, color: Colors.white),
+            onPressed: () {
+              // You can add settings or menu here
+            },
+          ),
+        ],
+      ),
       body: Column(
         children: [
           /////////////////////////
@@ -50,18 +77,42 @@ class _HomeScreenState extends State<HomeScreen> {
                   itemCount: users.length,
                   itemBuilder: (context, index) {
                     var user = users[index];
-                    return InkWell(
-                      onTap: () {
-                        Navigator.push(
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 12, vertical: 6),
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => Chatscreen(
-                                      receiverUid: user['uid'],
-                                      receiverEmail: user['email'],
-                                    )));
-                      },
-                      child: ListTile(
-                        title: Text(user['email']),
+                              builder: (context) => Chatscreen(
+                                receiverUid: user['uid'],
+                                receiverEmail: user['email'],
+                              ),
+                            ),
+                          );
+                        },
+                        child: Card(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          elevation: 3,
+                          child: Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: Row(
+                              children: [
+                                Icon(Icons.person, size: 30),
+                                SizedBox(width: 12),
+                                Text(
+                                  user['email'],
+                                  style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
                       ),
                     );
                   },

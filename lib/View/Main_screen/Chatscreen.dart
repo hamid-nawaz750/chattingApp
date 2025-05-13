@@ -52,7 +52,39 @@ class _ChatscreenState extends State<Chatscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(widget.receiverEmail)),
+      appBar: AppBar(
+        title: Text(
+          widget.receiverEmail,
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 20,
+            color: Colors.white,
+          ),
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.deepPurple,
+        elevation: 4,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        actions: [
+          IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.call,
+                color: Colors.white,
+              )),
+          IconButton(
+            icon: Icon(Icons.more_vert, color: Colors.white),
+            onPressed: () {
+              // You can add settings or menu here
+            },
+          ),
+        ],
+      ),
       body: SafeArea(
         child: Column(
           children: [
@@ -122,7 +154,7 @@ class _ChatscreenState extends State<Chatscreen> {
                         controller: messageController,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(5)),
+                              borderRadius: BorderRadius.circular(20)),
                           hintText: "Type a message...",
                         ),
                       ),
